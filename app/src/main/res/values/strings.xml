@@ -2,17 +2,23 @@
     <string name="app_name">Gafanhotator</string>
     
     <!-- Strings related to login -->
-    <string name="prompt_email">Username/Email</string>
+    <string name="prompt_email">Username/E-mail</string>
     <string name="prompt_password">Senha</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">Este username/email é inválido</string>
     <string name="error_invalid_password">A senha é muito pequena</string>
-    <string name="error_incorrect_password">A senha está incorreta</string>
+    <string name="error_incorrect_user_or_password">Usuário ou senha incorreta</string>
     <string name="error_field_required">Este campo é obrigatório</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
     <string name="title_activity_main">Promoções</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_settings">Configurações</string>
+    <string name="action_about">Sobre</string>
+    <string name="exit">Sair</string>
+    <string name="configurations">Configurações</string>
+    <string name="products">Produtos</string>
+    <string name="profile">Profile</string>
+    <string name="more">Mais</string>
+    <string name="title_activity_about">Sobre</string>
 </resources>

@@ -1,5 +1,6 @@
 package br.com.gafanhotator.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
 /**
  * Created by vitor on 14/01/2016.
  */
-public class User {
+public class User implements Serializable {
     /**
      * The persistent class for the GA_USER database table.
      *
@@ -17,13 +18,12 @@ public class User {
      */
     private static final long serialVersionUID = 5606433073666923082L;
 
-    private String passwordConfirmation;
-    private String emailConfirmation;
-
     public User() {
     }
 
     private Long id;
+    private String passwordConfirmation;
+    private String emailConfirmation;
     private Gender gender = Gender.NA;
     private String email;
     private String firstName;
@@ -45,10 +45,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
     }
 
     public void setEnabled(boolean enabled) {
@@ -152,10 +148,6 @@ public class User {
         this.creationDate = creationDate;
     }
 
-	/*
-     * Presentations Methods
-	 */
-
     public String getFullName() {
         String firstName = this.firstName != null ? this.firstName : "";
         String lastName = this.lastName != null ? this.lastName : "";
@@ -174,8 +166,30 @@ public class User {
         this.addUserRole(new UserRole(this, role));
     }
 
-    @Override
-    public String toString() {
-        return "username = " + this.username;
-    }
+//    /*
+//     * Parcelable Methods
+//	 */
+//
+//    @Override
+//    public int describeContents() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public void writeToParcel(Parcel dest, int flags) {
+//        dest.writeStringArray(new String[]{this.username, this.email, String.valueOf(this.Action)});
+//    }
+//
+//    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
+//
+//        @Override
+//        public User createFromParcel(Parcel in) {
+//            return new User(in);
+//        }
+//
+//        @Override
+//        public User[] newArray(int size) {
+//            return new User[size];
+//        }
+//    };
 }

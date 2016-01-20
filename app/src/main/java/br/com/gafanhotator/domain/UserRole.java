@@ -1,9 +1,13 @@
 package br.com.gafanhotator.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by vitor on 14/01/2016.
  */
-public class UserRole {
+public class UserRole implements Serializable {
+
+    private static final long serialVersionUID = 6190245270477627347L;
 
     private Long id;
     private User user;
